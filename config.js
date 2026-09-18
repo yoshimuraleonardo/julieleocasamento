@@ -32,9 +32,8 @@ const SITE_CONFIG = {
   // 3. Clique em Enviar > ícone "<>" (incorporar) e copie o link
   //    que aparece dentro de src="..." — cole abaixo.
   // ------------------------------------------------------------
-  rsvpFormEmbedUrl: <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc2FqZp9kc7cPRPb4TGkBHybUT6fibtQG9d0OzIFg45Py_vSQ/viewform?embedded=true" width="640" height="969" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>,
-  rsvpFormDirectUrl: https://docs.google.com/forms/d/e/1FAIpQLSc2FqZp9kc7cPRPb4TGkBHybUT6fibtQG9d0OzIFg45Py_vSQ/viewform?usp=publish-editor, // link "Enviar" simples, usado no botão alternativo
-
+rsvpFormEmbedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc2FqZp9kc7cPRPb4TGkBHybUT6fibtQG9d0OzIFg45Py_vSQ/viewform?embedded=true",
+rsvpFormDirectUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc2FqZp9kc7cPRPb4TGkBHybUT6fibtQG9d0OzIFg45Py_vSQ/viewform?usp=publish-editor", // link "Enviar" simples, usado no botão alternativo
   // ------------------------------------------------------------
   // LISTA DE PRESENTES — dados do Pix
   // ------------------------------------------------------------
