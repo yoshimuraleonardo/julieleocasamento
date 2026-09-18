@@ -33,8 +33,8 @@
    ============================================================ */
 const GIFTS = [
     {
-    name: "Doe qualquer valor",
-    description: "Defina o valor que quiser",
+    name: "Escolha o valor",
+    description: "Defina o valor que preferir nos presentear",
     price: "R$ 0",
     amount: 0,
     pixLink: "https://nubank.com.br/cobrar/f619r/6aad6314-6439-4eae-b4f8-e0151c4aedab",
