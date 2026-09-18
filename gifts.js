@@ -32,7 +32,15 @@
    só o valor sugerido muda de um pro outro.
    ============================================================ */
 const GIFTS = [
-  {
+    {
+    name: "Doe qualquer valor",
+    description: "Defina o valor que quiser",
+    price: "R$ 0",
+    amount: 0,
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aad6314-6439-4eae-b4f8-e0151c4aedab",
+    image: "images/Gemini_Generated_Image_xc3vs6xc3vs6xc3v.jpg",
+  },
+   {
     name: "Snorkel em Taipu de Fora",
     description: "Mergulho em Maraú - BA",
     price: "R$ 150",
