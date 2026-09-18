@@ -10,6 +10,14 @@
      price       -> valor exibido no card, ex: "R$ 250"
      amount      -> valor numérico usado para gerar o QR code do Pix
                     (sem "R$", use ponto para centavos, ex: 250 ou 89.90)
+                    Só é usado se "pixLink" (abaixo) estiver vazio.
+     pixLink     -> (opcional) link de cobrança gerado pelo seu banco
+                    pra esse valor específico, ex. no Nubank: abra o
+                    app → Pix → Cobrar → digite o valor → gere o link
+                    e cole aqui. Se preenchido, o card usa esse link
+                    (mais confiável, já com o valor certo). Se deixar
+                    "" (vazio), o site gera um Pix genérico com a sua
+                    chave (config.js) + o valor de "amount" acima.
      image       -> caminho ou link da imagem. Pode ser:
                     - um arquivo dentro de /images/presentes/, ex:
                       "images/presentes/ostras.jpg"
@@ -29,6 +37,7 @@ const GIFTS = [
     description: "Ajude a bancar uma degustação de ostras frescas em Hiroshima.",
     price: "R$ 150",
     amount: 150,
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac94b9-ecd1-4076-ac0f-e0d7300c4427",
     image: "images/presentes/ostras-hiroshima.svg",
   },
   {
@@ -36,6 +45,7 @@ const GIFTS = [
     description: "Uma experiência com folha de ouro, tradição centenária de Kanazawa.",
     price: "R$ 200",
     amount: 200,
+    pixLink: "",
     image: "images/presentes/arte-ouro-kanazawa.svg",
   },
   {
@@ -43,6 +53,7 @@ const GIFTS = [
     description: "Um passeio de comidas pelas ruas mais animadas de Osaka.",
     price: "R$ 250",
     amount: 250,
+    pixLink: "",
     image: "images/presentes/dotonbori-tour.svg",
   },
   {
@@ -50,6 +61,7 @@ const GIFTS = [
     description: "Vista de 360° de Tóquio lá do alto do Shibuya Sky.",
     price: "R$ 250",
     amount: 250,
+    pixLink: "",
     image: "images/presentes/shibuya-sky.svg",
   },
   {
@@ -57,6 +69,7 @@ const GIFTS = [
     description: "Uma cerimônia do chá tradicional japonesa, completa.",
     price: "R$ 300",
     amount: 300,
+    pixLink: "",
     image: "images/presentes/cerimonia-cha.svg",
   },
   {
@@ -64,6 +77,7 @@ const GIFTS = [
     description: "Instalações imersivas de arte digital, uma das experiências mais únicas do Japão.",
     price: "R$ 300",
     amount: 300,
+    pixLink: "",
     image: "images/presentes/teamlab-planets.svg",
   },
   {
@@ -71,6 +85,7 @@ const GIFTS = [
     description: "Um dia inteiro passeando de kimono pelas ruas históricas de Quioto.",
     price: "R$ 400",
     amount: 400,
+    pixLink: "",
     image: "images/presentes/kimono-kyoto.svg",
   },
   {
@@ -78,6 +93,7 @@ const GIFTS = [
     description: "Um almoço especial com carne Wagyu de verdade.",
     price: "R$ 600",
     amount: 600,
+    pixLink: "",
     image: "images/presentes/wagyu-almoco.svg",
   },
   {
@@ -85,6 +101,7 @@ const GIFTS = [
     description: "Um dia de ingresso no parque Tokyo Disneyland.",
     price: "R$ 700",
     amount: 700,
+    pixLink: "",
     image: "images/presentes/parque-tematico-1.svg",
   },
   {
@@ -92,6 +109,7 @@ const GIFTS = [
     description: "Um dia de ingresso no parque Tokyo DisneySea.",
     price: "R$ 700",
     amount: 700,
+    pixLink: "",
     image: "images/presentes/parque-tematico-2.svg",
   },
   {
@@ -99,6 +117,7 @@ const GIFTS = [
     description: "Um dia de ingresso no Universal Studios Japan.",
     price: "R$ 700",
     amount: 700,
+    pixLink: "",
     image: "images/presentes/parque-tematico-3.svg",
   },
 ];

@@ -105,7 +105,11 @@ function renderGifts() {
   grid.innerHTML = GIFTS.map(
     (gift, i) => `
     <div class="gift-card">
-      <div class="gift-img-wrap"><img src="${gift.image}" alt="${gift.name}" loading="lazy"></div>
+      <div class="gift-img-wrap">${
+        gift.image
+          ? `<img src="${gift.image}" alt="${gift.name}" loading="lazy">`
+          : `<div class="gift-img-placeholder">${gift.name.charAt(0)}</div>`
+      }</div>
       <div class="gift-body">
         <div class="gift-name">${gift.name}</div>
         <div class="gift-desc">${gift.description || ""}</div>
@@ -138,24 +142,49 @@ function openGiftModal(gift) {
   document.querySelector("[data-modal-title]").textContent = gift.name;
   document.querySelector("[data-modal-price]").textContent = gift.price || "";
 
-  const payload = buildPixPayload({
-    key: SITE_CONFIG.pixKey,
-    name: SITE_CONFIG.pixReceiverName,
-    city: SITE_CONFIG.pixReceiverCity,
-    amount: gift.amount || null,
-    description: gift.name,
-  });
-
   const canvas = document.getElementById("qrCanvas");
-  QRCode.toCanvas(canvas, payload, { width: 200, margin: 1, color: { dark: "#2A2A22", light: "#FBF8F1" } });
-
   const keyText = document.querySelector("[data-pix-payload]");
-  keyText.textContent = payload;
-  keyText.dataset.full = payload;
-
   const copyBtn = document.querySelector("[data-copy-btn]");
-  copyBtn.textContent = "Copiar código Pix";
-  copyBtn.classList.remove("copied");
+  const openLinkBtn = document.querySelector("[data-pix-open-link]");
+  const helpText = document.querySelector("[data-pix-help]");
+
+  if (gift.pixLink) {
+    // Link de cobrança gerado pelo banco (já com o valor certo)
+    QRCode.toCanvas(canvas, gift.pixLink, {
+      width: 200,
+      margin: 1,
+      color: { dark: "#2A2A22", light: "#FBF8F1" },
+    });
+    keyText.textContent = gift.pixLink;
+    keyText.dataset.full = gift.pixLink;
+    copyBtn.textContent = "Copiar link";
+    copyBtn.classList.remove("copied");
+    openLinkBtn.href = gift.pixLink;
+    openLinkBtn.style.display = "inline-block";
+    helpText.textContent =
+      "Toque em \"Abrir e pagar\" ou escaneie o QR code com a câmera do celular.";
+  } else {
+    // Fallback: Pix genérico gerado com a chave de config.js + o valor do presente
+    const payload = buildPixPayload({
+      key: SITE_CONFIG.pixKey,
+      name: SITE_CONFIG.pixReceiverName,
+      city: SITE_CONFIG.pixReceiverCity,
+      amount: gift.amount || null,
+      description: gift.name,
+    });
+    QRCode.toCanvas(canvas, payload, {
+      width: 200,
+      margin: 1,
+      color: { dark: "#2A2A22", light: "#FBF8F1" },
+    });
+    keyText.textContent = payload;
+    keyText.dataset.full = payload;
+    copyBtn.textContent = "Copiar código Pix";
+    copyBtn.classList.remove("copied");
+    openLinkBtn.style.display = "none";
+    helpText.textContent =
+      "Abra o app do seu banco, escolha \"Pix Copia e Cola\" e cole o código, ou escaneie o QR code.";
+  }
 
   backdrop.classList.add("open");
 }
