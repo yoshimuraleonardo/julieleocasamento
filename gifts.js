@@ -37,7 +37,7 @@ const GIFTS = [
     description: "Ajude a bancar uma degustação de ostras frescas em Hiroshima.",
     price: "R$ 150",
     amount: 150,
-    pixLink: "https://nubank.com.br/cobrar/f619r/6aac94b9-ecd1-4076-ac0f-e0d7300c4427",
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac9665-da6a-45a8-902d-50f373f108c0",
     image: "images/presentes/ostras-hiroshima.svg",
   },
   {
@@ -45,7 +45,7 @@ const GIFTS = [
     description: "Uma experiência com folha de ouro, tradição centenária de Kanazawa.",
     price: "R$ 200",
     amount: 200,
-    pixLink: "",
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac9859-bab3-4db5-94a2-074ed233b15c",
     image: "images/presentes/arte-ouro-kanazawa.svg",
   },
   {
@@ -53,7 +53,7 @@ const GIFTS = [
     description: "Um passeio de comidas pelas ruas mais animadas de Osaka.",
     price: "R$ 250",
     amount: 250,
-    pixLink: "",
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac98ca-9acc-453a-b1e9-eab3f65b4cb9",
     image: "images/presentes/dotonbori-tour.svg",
   },
   {
@@ -61,7 +61,7 @@ const GIFTS = [
     description: "Vista de 360° de Tóquio lá do alto do Shibuya Sky.",
     price: "R$ 250",
     amount: 250,
-    pixLink: "",
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac98f7-35dc-406e-af13-4386c8b03af3",
     image: "images/presentes/shibuya-sky.svg",
   },
   {
@@ -69,7 +69,7 @@ const GIFTS = [
     description: "Uma cerimônia do chá tradicional japonesa, completa.",
     price: "R$ 300",
     amount: 300,
-    pixLink: "",
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac9917-dca5-4d76-a5b9-103bb2e47533",
     image: "images/presentes/cerimonia-cha.svg",
   },
   {
@@ -77,7 +77,7 @@ const GIFTS = [
     description: "Instalações imersivas de arte digital, uma das experiências mais únicas do Japão.",
     price: "R$ 300",
     amount: 300,
-    pixLink: "",
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac9939-b651-4d76-8469-abbd2d9850ec",
     image: "images/presentes/teamlab-planets.svg",
   },
   {
@@ -85,7 +85,7 @@ const GIFTS = [
     description: "Um dia inteiro passeando de kimono pelas ruas históricas de Quioto.",
     price: "R$ 400",
     amount: 400,
-    pixLink: "",
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac995e-7851-4171-b0f0-563c0257548d",
     image: "images/presentes/kimono-kyoto.svg",
   },
   {
@@ -93,7 +93,7 @@ const GIFTS = [
     description: "Um almoço especial com carne Wagyu de verdade.",
     price: "R$ 600",
     amount: 600,
-    pixLink: "",
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac9982-a1ba-467b-8495-c8a2b3c49ab9",
     image: "images/presentes/wagyu-almoco.svg",
   },
   {
@@ -101,7 +101,7 @@ const GIFTS = [
     description: "Um dia de ingresso no parque Tokyo Disneyland.",
     price: "R$ 700",
     amount: 700,
-    pixLink: "",
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac99ab-3a31-4b09-8df2-8ec5dbb8f687",
     image: "images/presentes/parque-tematico-1.svg",
   },
   {
@@ -109,7 +109,7 @@ const GIFTS = [
     description: "Um dia de ingresso no parque Tokyo DisneySea.",
     price: "R$ 700",
     amount: 700,
-    pixLink: "",
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac99d0-3d51-4823-b8d5-8d79844bb64d",
     image: "images/presentes/parque-tematico-2.svg",
   },
   {
@@ -117,7 +117,7 @@ const GIFTS = [
     description: "Um dia de ingresso no Universal Studios Japan.",
     price: "R$ 700",
     amount: 700,
-    pixLink: "",
+    pixLink: "https://nubank.com.br/cobrar/f619r/6aac99ea-ca2f-4b29-b01a-e9f886b24d60",
     image: "images/presentes/parque-tematico-3.svg",
   },
 ];
