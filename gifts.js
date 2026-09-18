@@ -59,8 +59,8 @@ const GIFTS = [
    {
     name: "Passeio de Jardineira pelas praias",
     description: "Passeio de barco pelas praias da Região",
-    price: "R$ 250",
-    amount: 250,
+    price: "R$ 275",
+    amount: 275,
     pixLink: "https://nubank.com.br/cobrar/f619r/6aac9982-a1ba-467b-8495-c8a2b3c49ab9",
     image: "images/watermarked_img_7428575731182869263.jpg",
   },
@@ -83,8 +83,8 @@ const GIFTS = [
   {
     name: "Passeio à Cachoeira de Tremembé",
     description: "Passeio com ingresso para as cachoeiras de Tremembé",
-    price: "R$ 500",
-    amount: 500,
+    price: "R$ 450",
+    amount: 450,
     pixLink: "https://nubank.com.br/cobrar/f619r/6aac9939-b651-4d76-8469-abbd2d9850ec",
     image: "images/Gemini_Generated_Image_pynqocpynqocpynq (3).jpg",
   },
